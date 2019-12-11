@@ -78,6 +78,6 @@
 [int]$AppRemove = 1
 $AllAppX | ForEach-Object {
 	Write-Host "Removing ${AppRemove}"
-	Start-Process -FilePath msiexec -ArguementList '/x $_ /passive' -Wait
+	Start-Process -FilePath msiexec -ArgumentList '/x $_ /passive' -Wait
 	$AppRemove = $AppRemove + 1
 }
